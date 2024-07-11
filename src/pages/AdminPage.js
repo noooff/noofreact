@@ -20,7 +20,7 @@ const AdminPage = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get('https://oufapi-5cc267ed7086.herokuapp.com/api/products');
+      const response = await axios.get('https://noufapi-5cc267ed7086.herokuapp.com/api/products');
       setProducts(response.data);
     } catch (error) {
       console.error('Error fetching products:', error);
@@ -39,7 +39,7 @@ const AdminPage = () => {
     data.append('categoryid', formData.categoryid);
 
     try {
-      const response = await axios.post('https://oufapi-5cc267ed7086.herokuapp.com/api/products', data, {
+      const response = await axios.post('https://noufapi-5cc267ed7086.herokuapp.com/api/products', data, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -60,7 +60,7 @@ const AdminPage = () => {
 
     if (confirmDelete) {
       try {
-        const response = await axios.delete(`https://oufapi-5cc267ed7086.herokuapp.com/api/products/${productId}`);
+        const response = await axios.delete(`https://noufapi-5cc267ed7086.herokuapp.com/api/products/${productId}`);
         console.log('Product deleted:', response.data);
         fetchProducts();
       } catch (error) {
@@ -83,7 +83,7 @@ const AdminPage = () => {
     }
 
     try {
-      const response = await axios.put(`https://oufapi-5cc267ed7086.herokuapp.com/api/products/${productIdToUpdate}`, data, {
+      const response = await axios.put(`https://noufapi-5cc267ed7086.herokuapp.com/api/products/${productIdToUpdate}`, data, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
