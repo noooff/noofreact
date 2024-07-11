@@ -7,7 +7,7 @@ const AdminPage = () => {
     name: '',
     description: '',
     price: '',
-    image: null,
+    image_url: null,
     categoryid: ''
   });
   const [error, setError] = useState(null);
