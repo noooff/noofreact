@@ -45,7 +45,7 @@ const RegisterPage = () => {
     }
 
     try {
-      const response = await axios.post('https://oufapi-5cc267ed7086.herokuapp.com/api/users', {
+      const response = await axios.post('https://noufapi-5cc267ed7086.herokuapp.com/api/users', {
         username: formData.username,
         password: formData.password,
         email: formData.email,

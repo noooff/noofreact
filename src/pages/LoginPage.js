@@ -12,7 +12,7 @@ const LoginPage = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.get(`https://oufapi-5cc267ed7086.herokuapp.com/api/users${email}/${password}`);
+            const response = await axios.get(`https://noufapi-5cc267ed7086.herokuapp.com/api/users${email}/${password}`);
             const user = response.data[0]; // Assuming it returns a single user
             window.location = "/products"
             
