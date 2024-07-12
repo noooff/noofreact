@@ -10,7 +10,7 @@ const ProductList = () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await axios.get('http://localhost:3007/api/products');
+            const response = await axios.get('https://noufapi-5cc267ed7086.herokuapp.com/api/products');
             setProducts(response.data); // Assuming your API returns an array of products
         } catch (error) {
             console.error('Error fetching products:', error);
@@ -25,7 +25,7 @@ const ProductList = () => {
                     {products.map(product => (
                         <div className="col" key={product.product_id}>
                             <div className="card shadow-sm">
-                                <img src={`http://localhost:3007/uploads/${product.image_url}`} alt={product.name} className="product-image" />
+                                <img src={`https://noufapi-5cc267ed7086.herokuapp.com/uploads/${product.image_url}`} alt={product.name} className="product-image" />
  
                                 <div className="card-body">
                                     <h5>{product.name}</h5>
